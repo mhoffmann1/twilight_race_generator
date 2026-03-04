@@ -1,7 +1,7 @@
 # Twilight Imperium 4E – Faction Pool Generator v1.1
 
 This script generates **private faction pools** for each player in a game of Twilight Imperium 4th Edition  
-(Base Game + Prophecy of Kings + Vigil + Thunder’s Edge).
+(Base Game + Prophecy of Kings + Thunder’s Edge).
 
 Each player receives a **BASE64-encoded list of factions**, so they can privately decode their available options without revealing them immediately.
 
@@ -9,14 +9,12 @@ Each player receives a **BASE64-encoded list of factions**, so they can privatel
 
 ## Features
 
-- Supports **3–8 players**
+- Supports **3–6 players**
 - Each player receives:
   - At least **1 faction from Prophecy of Kings**
   - At least **1 faction from Vigil/Thunder’s Edge (combined)**
   - Remaining factions from the **Base Game**
-- Each player gets:
-  - Up to **5 factions**, or  
-  - **3 factions** in 8-player games (due to total faction count limits)
+- Each player gets 5 races to pick from
 - Output is **BASE64 encoded** for fun “hidden pool” sharing
 
 ---
@@ -33,19 +31,19 @@ Each player receives a **BASE64-encoded list of factions**, so they can privatel
 Run the script from the command line:
 
 ```bash
-python3 ti4_pools.py <number_of_players>
+python3 shuffle_races.py <number_of_players>
 ```
 
 Example:
 
 ```bash
-python3 ti4_pools.py 6
+python3 shuffle_races.py 6
 ```
 
 Optional reproducible seed:
 
 ```bash
-python3 ti4_pools.py 8 --seed 42
+python3 shuffle_races.py 8 --seed 42
 ```
 
 ---
